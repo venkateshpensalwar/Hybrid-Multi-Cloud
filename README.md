@@ -7,3 +7,4 @@ There i have disscused about how we can create complete infrastructre using terr
 medium link :-
 https://medium.com/@venkateshpensalwar/how-to-create-infrastructure-and-launch-website-using-amazon-web-services-and-terra-form-554c6d7f1e7f
 
+Note: don't use k8s_yml it is for different project
