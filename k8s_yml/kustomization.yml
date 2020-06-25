@@ -3,7 +3,7 @@ kind: Kustomization
 
 resources:
   - secret.yml
-  - pvc.yml
+  - mysql_pvc.yml
   - wp_pvc.yml
   - mysql.yml
   - wordpress.yml
