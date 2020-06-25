@@ -1,0 +1,69 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: mysql
+spec:
+  selector:
+     app: sql
+  clusterIP: None 
+  ports:
+  - name: mysql
+    port: 3306 
+    protocol: TCP  
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: mysql-set
+    labels: 
+     app: sql
+spec:
+  replicas: 1
+  selector:
+     matchLabels:
+       env: dev
+       app: sql
+  template:
+   metadata:
+     name: sqlpod
+     labels:
+       env: dev
+       app: sql
+   spec:
+    volumes:
+        - name: sqlvolume
+          persistentVolumeClaim:
+            claimName: myvolume
+    containers:
+       - name: sqlpod
+         image: mysql:5.6
+         ports:
+          - containerPort: 3306
+         env:
+         - name: MYSQL_ROOT_PASSWORD
+           valueFrom:
+             secretKeyRef:
+                 name: mysecret
+                 key: rpass
+         - name: MYSQL_DATABASE
+           value: wp-db
+         - name: MYSQL_USER
+           valueFrom:
+             secretKeyRef:
+                name: mysecret
+                key: user
+         - name: MYSQL_PASSWORD
+           valueFrom:
+             secretKeyRef:
+                name: mysecret
+                key: upass
+         volumeMounts:
+           - name: sqlvolume
+             mountPath: /var/lib/mysql
+        
+         
+             
+       
+         
+    
+      

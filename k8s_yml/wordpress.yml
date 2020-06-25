@@ -1,0 +1,45 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: wordpress
+spec:
+  selector:
+     app: wordpress
+  type: LoadBalancer
+  ports:
+  - name: wordpress
+    port: 80
+    nodePort: 31000
+---
+apiVersion: apps/v1
+kind:  Deployment
+metadata: 
+  name: wordpress-set
+spec: 
+  replicas: 1
+  selector:
+    matchLabels:
+     env: dev
+     app: wordpress
+  template:
+    metadata: 
+      name: wordpress-pod
+      labels:
+        env: dev
+        app: wordpress
+    spec: 
+      volumes:
+        - name: wpvolume
+          persistentVolumeClaim:
+            claimName: myvolume2
+      containers:
+        - name: wordpress-pod
+          image: wordpress:4.8-apache
+          ports:
+          - containerPort: 80
+          volumeMounts:
+           - name: wpvolume
+             mountPath: /var/www/html
+          
+
+
