@@ -1,10 +1,10 @@
 # Hybrid-Multi-Cloud
 
-### You can see my full post on medium.com
+### You can see my full posts on medium.com
 
-There i have disscused about how we can create complete infrastructre using terraform and AWS.also i have created one web server and uploaded html files using terraform.
 
-medium link :-
-https://medium.com/@venkateshpensalwar/how-to-create-infrastructure-and-launch-website-using-amazon-web-services-and-terra-form-554c6d7f1e7f
 
-Note: don't use k8s_yml it is for different project
+medium link :-  https://medium.com/@venkateshpensalwar
+
+
+Note: K8s_yml file is Kubernetes project
