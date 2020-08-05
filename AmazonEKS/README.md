@@ -6,5 +6,5 @@ see my project on industry use case
 
 Link : - https://medium.com/@venkateshpensalwar/amazon-elastic-kubernetes-service-2bc6bdd0b4e9?source=friends_link&sk=7dd7ed3c71829a2c91112548f46c219d
 
-Traning Certificate : - 
+Traning Certificate : - https://github.com/venkateshpensalwar/Hybrid-Multi-Cloud/blob/master/AmazonEKS/Traning%20Certificate.jpg
 
