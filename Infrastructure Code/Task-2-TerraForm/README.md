@@ -1,6 +1,6 @@
 # Hybrid-Multi-Cloud
 
-### Task 2 of 4 
+### Task 2 of 6 
 
 Get full information about code and task at medium.com
 
