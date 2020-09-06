@@ -8,4 +8,4 @@ medium link :-  https://medium.com/@venkateshpensalwar
 
 
 Note: K8s_yml file is Kubernetes project
-[![venkatesh's github stats](https://github-readme-stats.vercel.app/api?username=venkateshpensalwar)](https://github.com/anuraghazra/github-readme-stats)
+[![venkatesh's github stats](https://github-readme-stats.vercel.app/api?username=venkateshpensalwar)](https://github.com/venkateshpensalwar/github-readme-stats)
